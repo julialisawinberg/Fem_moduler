@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modul_4</title>
+    <!-- Font style -->
+    <link rel="stylesheet" href="https://use.typekit.net/yib7fic.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="container">
+        <!-- header ligger för sig själv -->
+        <header class="main-header">
+            <img src="img/logo.png" class="logo" alt="logga med en uggla som har hörlurar på">
+            <h2>EasyClass</h2>
+        </header>
+        <!-- här är kärnan av sidan -->
+        <article class="main-article">
+            <h1>Get Started</h1>
+            <!-- formulär -->
+            <form action="" class="contact-form" autocomplete="off">
+                <!-- välj stad -->
+                <label for="city-select">City</label>
+                <select name="city" id="city-select" class="input-field city">
+                    <option value="">Choose City</option>
+                    <option value="Stockholm">Stockholm</option>
+                    <option value="Oslo">Oslo</option>
+                </select>
+                <!-- e-post -->
+                <label for="email">E-post</label>
+                <input type="email" id="email" class="input-field" placeholder="name@hotmail.com">
+                <!-- Mobil -->
+                <label for="mobil">Mobil</label>
+                <input type="tel" id="mobil" class="input-field" placeholder="Mobile number">
+                <!-- Lösen ord box -->
+                <div class="lösen">
+                    <div class="losen">
+                        <!-- Lösenord -->
+                        <label for="pass">Lösenord</label>
+                        <input type="password" id="pass" class="input-field" placeholder="••••••••••••">
+                    </div>
+                    <div class="losen">
+                        <!-- Bekräfta lösenord -->
+                        <label for="passbek">Bekräfta Lösenord</label>
+                        <input type="password" id="passbek" class="input-field" placeholder="••••••••••••">
+                    </div>
+                </div>
+                <div class="registrera">
+                    <!-- redan medläm länk -->
+                    <a href="#" class="member">Redan medlem? Logga in.</a>
+                    <!-- Rekistrera knapp -->
+                    <input type="submit" value="Registrera" class="btn-submit">
+                </div>
+            </form>
+        </article>
+        <!-- sidans footer -->
+        <footer class="main-footer">
+            <img src="img/pattern.png" class="footer-img" alt="möster med mönster">
+            <div class="footer-list">
+                <h3>EasyClass its the best option</h3>
+                <!-- Unlisted -->
+                <ul class="footer-ul">
+                    <li class="footer-li">Get instant feedback</li>
+                    <li class="footer-li">Put your learning into practice</li>
+                    <li class="footer-li">Learn by doing</li>
+                </ul>
+            </div>
+            <!-- För desktop -->
+            <div class="logo-desk">
+                <img src="img/logo.png" class="logo" alt="logga med en uggla som har hörlurar på">
+                <h2>EasyClass</h2>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>

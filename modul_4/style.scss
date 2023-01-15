@@ -1,0 +1,300 @@
+$primary-color: #F27D59;
+$secondary-color: #FFE0D2;
+$border-color: #695c5f;
+$article-color: #ffffff;
+$input-color: #898989;
+$member-color: #919191;
+$buttom-color: #413C3D;
+$footerfont-color: #3C3335;
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//Get started
+h1 {
+    //text vikt
+    font-weight: 700;
+    //text storlek
+    font-size: 2.75rem;
+}
+
+body {
+    //samma font på hela sidan
+    font-family: proxima-nova-extra-condensed, sans-serif;
+    //bakrundsfärg som syns först vid surfplatta
+    background-color: $primary-color;
+}
+
+.container {
+
+    //surfplatta
+    @media (min-width:770px) {
+        //puttar in inehållet och bakrundsförgen som är på boddyn kommer fram
+        margin: 1rem;
+        //rundar hörnen
+        border-radius: 10px;
+        //gömmer de spetsiga hörnen bakom border radius
+        overflow: hidden;
+
+    }
+
+    //desktop
+    @media (min-width:1150px) {
+        //aktiverar flex, lägger barnen brevid varandra i x-led
+        display: flex;
+        //så containern inte blir större än det
+        max-width: 1150px;
+        //centrerar i x-led
+        margin: auto;
+        //sjuter ner inehpllållet
+        margin: 2rem auto;
+    }
+
+    .main-header {
+        //headerns bakrundsfärg
+        background-color: $secondary-color;
+        //text vikt i header
+        font-weight: 400;
+        //aktiverar flex
+        display: flex;
+        //centrerar i y-led
+        align-items: center;
+        //textstorlek för texterns header
+        font-size: 1.5625rem;
+
+        //desktop
+        @media (min-width:1150px) {
+            //döljer header
+            display: none;
+        }
+
+        .logo {
+            //skapar luft mellan boxen
+            margin: 1.5rem;
+
+        }
+    }
+
+    .main-article {
+        //trycker in pch gör luft runt alla element i boxen
+        padding: 20px;
+        //för att inte boddusn färg ska vara här
+        background-color: $article-color;
+
+        //desktop
+        @media (min-width:1150px) {
+            //elementet ta 60% i bred
+            flex: 0 0 60%;
+
+
+        }
+
+        .contact-form {
+            //text storlek
+            font-size: 1.5rem;
+            //text tjocklek
+            font-weight: 200;
+
+            .input-field {
+                //ta så stor plats den kan på x-led
+                width: 100%;
+                //höjden på skrivfälten
+                height: 3.5rem;
+                //rundar hörnen
+                border-radius: 6px;
+                //stilen på sträckningnen runt skrivfälltet
+                border: 2px solid $border-color;
+                //mellanrum mellan skrivfärlten
+                margin: 10px 0;
+                //flyttar placeholder till höger
+                padding-left: .5rem;
+                //text storlek
+                font-size: 1rem;
+                //färg på textfärgen
+                color: $input-color;
+
+                &#city-select {
+                    //tar bort grundpilen
+                    appearance: none;
+                    //den nya pilen
+                    background-image: url(img/pil-ner.png);
+                    //att det bara är en
+                    background-repeat: no-repeat;
+                    //placerar den längst till vänster i skrivfältet
+                    background-position: right;
+
+                    //surfplatta
+                    @media (min-width:770px) {
+                        //nu tar den hälften så stor plats i x-led
+                        width: 50%;
+                        //placerar text och fältet pralelt i y-led
+                        display: flex;
+                    }
+                }
+            }
+
+            //egen container för de två lösenordsfältetn
+            .lösen {
+
+                //surfplata
+                @media (min-width:770px) {
+                    //placerar lösen fältetn brevis varandra i x-led
+                    display: flex;
+                    //sjuter boxarna mot kanterna
+                    justify-content: space-between;
+                }
+
+                .losen {
+                    //nu tar de midre plats, för att få plats brevid varandra, valde denna storlek för att de inte skulle helt gå ihop
+                    width: 48%;
+                }
+
+            }
+
+            .registrera {
+
+                //Surfplata
+                @media (min-width:770px) {
+                    //placerar lösen fältetn brevis varandra i x-led
+                    display: flex;
+                    //centrarar i y-led
+                    align-items: center;
+                    //sjuter isär elementen i x-led
+                    justify-content: space-between;
+                }
+
+                .member {
+                    //färg på texten
+                    color: $member-color;
+                    //text tjocklek
+                    font-weight: 200;
+
+                    //surplatta
+                    @media (min-width:770px) {
+                        //nu tar den minre plats
+                        flex: 0 0 40%;
+                    }
+
+                }
+
+                //rekistrera knapp
+                .btn-submit {
+                    //sjuter ner knappen
+                    margin-top: 1rem;
+                    //knappens färg
+                    background-color: $buttom-color;
+                    //textfärg, använde samma som artikels bakrundsfärg, var lat för att göra en ny men vet inte om det var bäst att itne ha en stil om nament gör det missvisande
+                    color: $article-color;
+                    //påverkar höjden på knappen
+                    padding: .8rem;
+                    //knappen tar upp allt plats på x-led
+                    width: 100%;
+                    //rundar hörnen på knappen
+                    border-radius: 10px;
+                    //textstorleken i knappen
+                    font-size: 22px;
+                    //text tjocklek
+                    font-weight: 500;
+                    //behövde lägga in fonten hör för att den skulle koppla
+                    font-family: proxima-nova-extra-condensed;
+
+                    //surfplatta
+                    @media (min-width:770px) {
+                        //nu tar knappen mindre plats i x-led
+                        flex: 0 0 30%;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .main-footer {
+        //bakrundsfär, som nu återanvänds och blir ett exempel varför variabler är bra att använda
+        background-color: $secondary-color;
+        //sjuter in inehållet i borden
+        padding: 1rem;
+
+        //surfplatta
+        @media (min-width:770px) {
+            //akriverar flex
+            display: flex;
+            //vill ha dem separerade i x-led
+            justify-content: space-between;
+            //centrerar i y-led
+            align-items: center;
+
+        }
+
+        //desktop
+        @media (min-width:1150px) {
+            //avaktiverar flex
+            display: block;
+            //elementet ska ta 40% i berdd
+            flex: 0 0 40%;
+        }
+
+        .footer-img {
+            //bilden växer med forumet
+            width: 100%;
+            //sjuter ner texten under bilden
+            padding-bottom: 1rem;
+
+            //surfplata
+            @media (min-width:770px) {
+                //bilden växer inte längre
+                flex: 0 0 50%;
+            }
+        }
+
+        .footer-list {
+            h3 {
+                //text storlek
+                font-size: 2rem;
+                //sjuter ner listan 
+                padding-bottom: 0.5rem;
+            }
+
+            .footer-ul {
+                //gör att listan är i linje med det andra inehållet
+                list-style-position: inside;
+            }
+
+            .footer-li {
+                //skapar luft i listan
+                padding-bottom: 1.25rem;
+                //text storlek
+                font-size: 1.5rem;
+                //listans textfärg
+                color: $footerfont-color;
+            }
+        }
+
+        .logo-desk {
+            //döljer
+            display: none;
+            //skapar utrumme runt loggan
+            margin: 1rem;
+
+            .logo {
+                //gör litet mellanrum emellan loggo och text
+                margin-right: 1rem;
+            }
+
+            //desktop
+            @media (min-width:1150px) {
+                //akriverar flex men tar också fram den då dålda matrealet
+                display: flex;
+                //centrerar i y-led
+                align-items: center;
+                //centrerar i x-led
+                justify-content: center;
+            }
+
+        }
+    }
+}

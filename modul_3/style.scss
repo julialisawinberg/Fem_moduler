@@ -1,0 +1,278 @@
+$primary-color: #282C3E;
+$header-color: #090718;
+//vet att det inte är toppen att döpa som i vilken färg de är men min fantasi var på minus
+$purple: #9168BB;
+$white: #FFFFFF;
+$main-font-color: #DDDDDD;
+$font-color-search: #A6A8B5;
+$backrund-color-search: #2E303B;
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $primary-color;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    background-color: $header-color;
+
+    .main-header {
+        //aktiverar flex
+        display: flex;
+        //trycker isär elementen i x-led
+        justify-content: space-between;
+        //höjden header
+        //height: 4.375rem;
+        //färg på header
+        background-color: $header-color;
+
+
+        //dektop
+        @media (min-width:1024px) {
+            max-width: 1024px;
+            margin: auto;
+        }
+
+        .ikon-box {
+            //får växa får krympa, ska ta 80%
+            flex: 1 80%;
+
+            //surfplata
+            @media (min-width:768px) {
+                //för att ta den tillbaka till defalt läget
+                flex: 0 0 auto;
+            }
+
+            .main-ul {
+                //får växa får krympa och ska ta så stor stop plats den kan i bredd
+                flex: 1 100%;
+                //aktiverar flex
+                display: flex;
+                //centrerar i y-led
+                align-items: center;
+                //tar bort stylen som är defalt
+                list-style: none;
+
+
+                .ikon {
+                    //höjden på boxen
+                    //height: 4.4rem;
+                    //får växa får krympa, auto
+                    flex: 1 auto;
+                    //aktiverar flex
+                    display: flex;
+                    //centrerar i x-led
+                    justify-content: center;
+                    //centrerar i y-led
+                    align-items: center;
+
+                    a {
+                        text-decoration: none;
+                        padding: 1rem;
+                    }
+
+                    //surfplata
+                    @media (min-width:768px) {
+                        //sjuter ut ikonen från boxens kant
+                        margin-left: 1rem;
+                        //eftersom text-box-ekonomi har en border bottom trycker det upp jutst den ruvriken, sätter på en transoarant för att alla ska sjutas upp lika mycket
+                        border-bottom: 5px solid transparent;
+                        //eftersom jag sjuter upp texten med en bordet bottom är inte längre texten centrerad i y-led, därför gör jag detta, en transparad rad över texten
+                        border-top: 5px solid transparent;
+                    }
+
+
+
+                    //de lila ikonerna
+                    .lila {
+                        //ikonernas storlek
+                        font-size: 1.7rem;
+                        //ikonernas färg
+                        color: $purple;
+
+                        //surfplata
+                        @media (min-width:768px) {
+                            //döljer
+                            display: none;
+                        }
+                    }
+
+                    //unikt för en ikon
+                    &.ikon-box-vit {
+                        //den vita ikonensn bakrundsfärg
+                        background-color: $purple;
+
+                        //surfplata
+                        @media (min-width:768px) {
+                            //tar bort bakrundsfärg
+                            background-color: transparent;
+                        }
+
+                        //den vita ikonen
+                        .vit {
+                            //ikonstorlek
+                            font-size: 1.7rem;
+                            //ikonens färg
+                            color: $white;
+
+                            //surfplata
+                            @media (min-width:768px) {
+                                //döljer
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .nav-text {
+                        //döljer i utgångsläge
+                        display: none;
+                        //färg på font
+                        color: $main-font-color;
+                        //fontstil
+                        font-family: 'Outfit', sans-serif;
+                        //text storlek
+                        font-size: 1.5rem;
+
+
+                        //surfplata
+                        @media (min-width:768px) {
+                            //aktiverar flex
+                            display: flex;
+
+                        }
+                    }
+
+                    &.ikon-dollar {
+                        //döljer
+                        display: none;
+
+                        .ikon-dollar-lila {
+                            //font på ikon
+                            font-size: 1.9rem;
+                            //färg på ikon
+                            color: $purple;
+                        }
+
+                        //surfplata
+                        @media (min-width:768px) {
+                            display: flex;
+                            justify-content: center;
+
+                        }
+                    }
+
+                    &.text-box-ekonomi {
+                        border-bottom: 5px solid #9168BB;
+                    }
+                }
+
+            }
+        }
+
+        .profil {
+            //probilbildens bakrundsfärg
+            background-color: #9168BB33;
+            //får växa får krympa, ska ta 20%
+            flex: 1 20%;
+            //tar upp hela höjden
+            //height: 100%;
+            //akriverar flex
+            display: flex;
+            //centrar y-led
+            align-items: center;
+            //centrerar x-led
+            justify-content: center;
+
+            //surfplatta
+            @media (min-width:768px) {
+                //valde den andelen för att trycka den mer till höger, får inte växa får inte krympa men ska vara 10% bred
+                flex: 0 0 10%;
+                //justify-content: space-between;
+                background-color: #090718;
+            }
+
+            .container-search {
+                //döljer
+                display: none;
+
+                //desktop
+                @media (min-width:1024px) {
+                    //ploclar fram
+                    display: block;
+                }
+
+                //döljer standardinstäningar i sökfältet
+                .visually-hidden {
+                    clip: rect(0 0 0 0);
+                    clip-path: inset(50%);
+                    height: 1px;
+                    overflow: hidden;
+                    position: absolute;
+                    white-space: nowrap;
+                    width: 1px;
+                }
+
+                .search-form {
+                    //för att placera ikon
+                    position: relative;
+                }
+
+                .btn-search {
+                    //placerar den i sökfältet i vänstra hörnet
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 1rem;
+                    //färg på ikonen
+                    color: $font-color-search;
+                    //tar bort defalt border
+                    border: none;
+                    //bakrundsfärg bakom ikonen
+                    background-color: $backrund-color-search;
+
+                    .icon-search {
+                        //ikonens storel
+                        font-size: 1.5rem;
+                    }
+                }
+
+                #q {
+                    //sökfältets bredd
+                    width: 18.2rem;
+                    //sökfältets höjd
+                    height: 2.81rem;
+                    //rundar kanderna
+                    border-radius: 10px;
+                    //tar bort defalt border
+                    border: none;
+                    //sjuter texten till höger
+                    padding-left: 3rem;
+                    //färgen på texten
+                    color: $font-color-search;
+                    font-size: 1rem;
+                    background-color: $backrund-color-search;
+
+                    &::placeholder {
+                        color: #A6A8B5;
+                    }
+                }
+
+            }
+
+            //dekstop
+            .profil-pic {
+                width: 60px;
+            }
+        }
+    }
+}

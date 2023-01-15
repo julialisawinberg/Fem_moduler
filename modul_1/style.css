@@ -1,0 +1,76 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #E3E3E3;
+  font-family: "Arial", Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+p {
+  font-weight: 700;
+}
+
+img {
+  display: block;
+}
+
+.flex-and-style {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 2px;
+  background-color: #ffffff;
+  color: #707070;
+}
+
+.container {
+  padding: 1rem;
+}
+@media (min-width: 1040px) {
+  .container {
+    max-width: 1040px;
+    margin: auto;
+  }
+}
+@media (min-width: 770px) {
+  .container .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.container .card {
+  position: relative;
+  padding: 2px;
+}
+.container .card .img-profil {
+  position: absolute;
+  top: 1.19rem;
+  left: 1.06rem;
+  height: 2.69rem;
+}
+.container .card .img-card {
+  width: 100%;
+}
+@media (min-width: 770px) {
+  .container .card {
+    flex: 0 0 48%;
+  }
+}
+@media (min-width: 1040px) {
+  .container .card {
+    flex: 0 0 31.3333333333%;
+  }
+}
+.container .card .icon {
+  padding-right: 8px;
+  color: #6A6068;
+}
+.container .card .icon.chat {
+  padding-left: 8px;
+}/*# sourceMappingURL=style.css.map */

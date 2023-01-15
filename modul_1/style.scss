@@ -1,0 +1,127 @@
+$primary-color: #E3E3E3;
+$icon-color: #6A6068;
+$card-color: #ffffff;
+$text-color: #707070;
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    //alltid samma bakrundsfärg
+    background-color: $primary-color;
+    //samma font på hela sidan
+    font-family: 'Arial', Helvetica, sans-serif;
+    //samma size på ikoner och text, därför kan den vara här
+    font-size: 16px;
+}
+
+//eftersom denna bara är på texten
+p {
+    //text tjocklek
+    font-weight: 700;
+}
+
+//enda instälningen som är på alla bilder
+img {
+    display: block;
+}
+
+//borde jag döpa om denna nu när den inte är nav längre?? Framtida julia för lösa den: Framtida Julia preoriterade inte detta men är inte helt nöjd med hur det är.
+.flex-and-style {
+    //aktiverar flex
+    display: flex;
+    //fördelar på x-led
+    justify-content: space-between;
+    //centrerar på y-led
+    align-items: center;
+    //skapar utrummet runt elementen
+    padding: 8px 2px;
+    //värg på kortet
+    background-color: $card-color;
+    //färg på texten
+    color: $text-color;
+
+}
+
+.container {
+    //skapar en ram som trycker in allt inehåll
+    padding: 1rem;
+
+    //desktop
+    @media (min-width:1040px) {
+        //så att korten inte fyter ut i oändlgiheten
+        max-width: 1040px;
+        //centrerar inehållet i x-led
+        margin: auto;
+
+    }
+
+    .content {
+
+        //surfplatta
+        @media (min-width:770px) {
+            //aktiverar flex, får inehållet att lägga sig i x-led
+            display: flex;
+            //slår ner inehållet en rad när inehållet ra upp mer plats äm föräldern på x-led
+            flex-wrap: wrap;
+            //fördelar inehållet i x-led
+            justify-content: space-between;
+        }
+
+    }
+
+    .card {
+        //att barnets position ska bete sig efter detta eliment
+        position: relative;
+        padding: 2px;
+
+        .img-profil {
+            //placerar elementet alltid här
+            position: absolute;
+            //mellanrumet från toppen av kortet
+            top: 1.19rem;
+            //mellanrumet från vänster av kortet
+            left: 1.06rem;
+            //tog ju dina bilder och då var en liten men den blev så pixlig, tod därför den stora och gjorde den liten, hade jag använt den i rätt storlek hade jag sparat 2 kod rader, är medveten om att det ger mig minus i stilpoäng
+            height: 2.69rem;
+        }
+
+        .img-card {
+            //bilden anpassar sig efter boxen den ligger i
+            width: 100%;
+        }
+
+        //surfplatta
+        @media (min-width:770px) {
+            //platsen de nu ska dela på och fördemar den jämt
+            flex: 0 0 calc(100%/2 - 2%);
+
+        }
+
+        //desktop
+        @media (min-width:1040px) {
+            //fördelat utrummet jämt
+            flex: 0 0 calc(100%/3 - 2%);
+
+        }
+
+        .icon {
+            //skapar lite lufft mellan eliment i kortet
+            padding-right: 8px;
+            //färg på ikoner
+            color: $icon-color;
+
+            //inte så stolt över denna lösning men tyckte det skulle bli så mycket kod att lösa med kluster och flexbox för den lilla grejen, men är medveten om att det inte är en 10/10 lösning. Men som kodare är man lat(?)och atm väldigt stressad haha </3
+            &.chat {
+                //så fördelnignen blir lika
+                padding-left: 8px;
+            }
+        }
+
+
+    }
+}

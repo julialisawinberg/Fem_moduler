@@ -1,0 +1,140 @@
+$brod: #707070;
+$primary-color: #3168DD;
+$secondary-color: #ffffff;
+$gps-color: #022152;
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//samma font på hela sidan dörför går det fint att placera i body
+body {
+    //font style
+    font-family: 'Poppins', sans-serif;
+}
+
+//huvud rubrik
+h1 {
+    //fontens vikt
+    font-weight: 500;
+}
+
+//brödtext
+p {
+    //fontens vikt
+    font-weight: 400;
+    //för att ge luft mellan styckena 
+    padding-bottom: 1rem;
+    //färg på brödtext
+    color: $brod;
+}
+
+.container {
+
+    //övre delen av sidan
+    .main-header {
+        //bakrundsfärg på header
+        background-color: $primary-color;
+        //aktiverar flex
+        display: flex;
+        //cetrerar på x-led med colum aktiverad blir det y-led
+        justify-content: center;
+        //centrerar på y-led men med colum aktiverad blir det x-led
+        align-items: center;
+        //lägger elementen under varandra i y-led, den vrider på axeln
+        flex-direction: column;
+        //höjden på hedern, vill gärna ha höjd hrä och centrera med flex
+        height: 14.9rem;
+        //färg på text
+        color: $secondary-color;
+        //text storlek på rubriken
+        font-size: 1.5rem;
+
+        //ikon i header
+        .gps {
+            //text storlek på ikonen
+            font-size: 6.3rem;
+            //färg på ikonen
+            color: $gps-color;
+            //för att skapa luft mellan ikon och där header slutar
+            padding-bottom: 1rem;
+        }
+    }
+
+    .main-article {
+        //håller texten inom detta utrymme, tyckte det såg bra/bäst ut
+        max-width: 18.7rem;
+        //centrerar inehåller i x-led, kan lösas med flex men nu sparar vi kod
+        margin: auto;
+        //skapar luft mellan brödtext och header
+        margin-top: 1.5rem;
+        //höjden tar upp hela sidan villket gör den skrollbar
+        height: 100vh;
+
+    }
+
+    //botten av sidan
+    .main-nav {
+        //backrindsfärg på naven
+        background-color: $primary-color;
+        //border på navet
+        border-bottom: 3px solid #022152;
+
+        .main-ul {
+            //aktiverar flex och lägger de brevid varandra på x-led
+            display: flex;
+            //lägger dem jämt fördelat på x-led
+            justify-content: space-evenly;
+            //centrerar på y-led
+            align-items: center;
+            //tar bort standard stylen på li
+            list-style: none;
+            //höjden på nav, vill ha höjd och centrera med flexbox.
+            height: 66px;
+
+            @media (min-width:1024px) {
+                //så ikonerna inte flyter ut i oändligheten
+                max-width: 1040px;
+                //så de är centreradei x-led
+                margin: auto;
+            }
+
+
+            //unik stil på de vita ikonerna
+            .white {
+                color: $secondary-color;
+                font-size: 1.9rem;
+            }
+
+            //unik stil på mitten ikonen
+            .black-backround {
+                //bakrundsfärg bakom den svarta ikonen
+                background-color: $secondary-color;
+                //0 är två hörnen i toppen och 50 är hörnen i botten
+                border-radius: 0 0 50px 50px;
+                //att den fyller ut hela utrymmet i höjden
+                height: 100%;
+                //brädden
+                flex: 0 0 3.31rem;
+                //aktiverar flex, nödvändigt nu när jag näslade in den ett steg från de andra ikonerna
+                display: flex;
+                //centrerar x-led
+                justify-content: center;
+                //centrerar y-led
+                align-items: center;
+
+                //unik stil på mitten ikonen
+                .black {
+                    //färg på mitten ikonen
+                    color: black;
+                    //storlek
+                    font-size: 1.9rem;
+                }
+            }
+
+        }
+    }
+}

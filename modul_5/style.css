@@ -1,0 +1,122 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  font-family: "Roboto", sans-serif;
+}
+
+.container .img-logga {
+  width: 6rem;
+  margin: 1rem 0.5rem;
+}
+.container .main-header {
+  width: 100vw;
+  height: 400px;
+  color: #ffffff;
+  position: relative;
+  background-image: url(cmore/img/Image1@2x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.container .main-header img {
+  width: 100%;
+  height: 50%;
+}
+.container .main-header .info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 1rem;
+}
+@media (min-width: 600px) {
+  .container .main-header .info {
+    max-width: 60%;
+    bottom: 2rem;
+  }
+}
+.container .main-header .info h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.container .main-header .info h1 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0.3rem 0;
+}
+.container .main-header .info p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.container .side-croll-container {
+  padding: 0.5rem;
+}
+.container .side-croll-container .katt-rub {
+  color: #ffffff;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+.container .side-croll-container .side-scroll {
+  display: flex;
+  overflow-x: scroll;
+}
+.container .side-croll-container .side-scroll::-webkit-scrollbar {
+  display: none;
+}
+.container .side-croll-container .side-scroll .card {
+  margin-left: 0.35rem;
+}
+.container .side-croll-container .side-scroll .card.card-max {
+  position: relative;
+}
+.container .side-croll-container .side-scroll .card.card-max .img-max {
+  width: 566px;
+}
+.container .side-croll-container .side-scroll .card.card-max .figcaption-img {
+  color: #ffffff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #000000;
+  padding: 1rem;
+}
+.container .side-croll-container .side-scroll .card.card-max .figcaption-img h3 {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.container .side-croll-container .side-scroll .card.card-max .figcaption-img p {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+.container .side-croll-container .side-scroll .card.card-max .figcaption-img .age {
+  border: 1px #ffffff solid;
+  border-radius: 2px;
+  font-size: 0.5rem;
+}
+.container .side-croll-container .side-scroll .card.card-max .figcaption-img .figcap-bott {
+  display: flex;
+  justify-content: space-between;
+}
+.container .side-croll-container .side-scroll .card.card-max .figcaption-img .figcap-bott .figcap-bott-left {
+  display: flex;
+  flex: 0 0 30%;
+  justify-content: space-between;
+}
+.container .side-croll-container .side-scroll .card.card-max .figcaption-img .figcap-bott .figcap-bott-right {
+  display: flex;
+  flex: 0 0 13%;
+  justify-content: space-between;
+}
+.container .side-croll-container .side-scroll .card.card-max .figcaption-img .figcap-bott .figcap-bott-right img {
+  width: 30px;
+}
+.container .side-croll-container .side-scroll .card:last-child {
+  margin-right: 0;
+}/*# sourceMappingURL=style.css.map */

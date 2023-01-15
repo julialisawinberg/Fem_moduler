@@ -1,0 +1,156 @@
+$body-color: #000000;
+$font-color: #ffffff;
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $body-color;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    .img-logga {
+        width: 6rem;
+        margin: 1rem .5rem;
+    }
+
+    .main-header {
+        width: 100vw;
+        height: 400px;
+        color: $font-color;
+        position: relative;
+        background-image: url(cmore/img/Image1@2x.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        img {
+            width: 100%;
+            height: 50%;
+
+        }
+
+        .info {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin: 1rem;
+
+            @media (min-width:600px) {
+                max-width: 60%;
+                bottom: 2rem;
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            h1 {
+                font-size: 25px;
+                font-weight: 700;
+                margin: 0.3rem 0;
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .side-croll-container {
+        padding: 0.5rem;
+
+        .katt-rub {
+            color: $font-color;
+            font-size: 1rem;
+            margin: 1rem 0;
+
+        }
+
+        .side-scroll {
+            display: flex;
+            overflow-x: scroll;
+
+            //för att ta bort scroll bar i crome
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .card {
+                margin-left: .35rem;
+
+                &.card-max {
+                    position: relative;
+                    // width: 418px;
+
+                    .img-max {
+                        width: 566px;
+                        // width: 418px;
+                    }
+
+                    .figcaption-img {
+                        color: $font-color;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        background-color: #000000;
+                        padding: 1rem;
+
+                        h3 {
+                            font-size: 15px;
+                            font-weight: 400;
+                            margin-bottom: .5rem;
+                        }
+
+                        p {
+                            font-size: 12px;
+                            font-weight: 300;
+                            margin-bottom: .5rem;
+                        }
+
+                        .age {
+                            border: 1px $font-color solid;
+                            border-radius: 2px;
+                            font-size: .5rem;
+                        }
+
+                        .figcap-bott {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .figcap-bott-left {
+                                display: flex;
+                                flex: 0 0 30%;
+                                justify-content: space-between;
+                            }
+
+                            .figcap-bott-right {
+                                display: flex;
+                                flex: 0 0 13%;
+                                justify-content: space-between;
+
+                                img {
+                                    width: 30px;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+        }
+    }
+
+}

@@ -1,0 +1,76 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 400;
+  padding-bottom: 1rem;
+  color: #707070;
+}
+
+.container .main-header {
+  background-color: #3168DD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 14.9rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+.container .main-header .gps {
+  font-size: 6.3rem;
+  color: #022152;
+  padding-bottom: 1rem;
+}
+.container .main-article {
+  max-width: 18.7rem;
+  margin: auto;
+  margin-top: 1.5rem;
+  height: 100vh;
+}
+.container .main-nav {
+  background-color: #3168DD;
+  border-bottom: 3px solid #022152;
+}
+.container .main-nav .main-ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  height: 66px;
+}
+@media (min-width: 1024px) {
+  .container .main-nav .main-ul {
+    max-width: 1040px;
+    margin: auto;
+  }
+}
+.container .main-nav .main-ul .white {
+  color: #ffffff;
+  font-size: 1.9rem;
+}
+.container .main-nav .main-ul .black-backround {
+  background-color: #ffffff;
+  border-radius: 0 0 50px 50px;
+  height: 100%;
+  flex: 0 0 3.31rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main-nav .main-ul .black-backround .black {
+  color: black;
+  font-size: 1.9rem;
+}/*# sourceMappingURL=style.css.map */
